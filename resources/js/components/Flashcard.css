@@ -1,0 +1,87 @@
+.flashcards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.flashcard {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flashcard-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.6s;
+    border-radius: 5px;
+}
+
+.flashcard-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.flashcard-front,
+.flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+    box-sizing: border-box;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.flashcard-front {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(251, 250, 252);
+    color: purple;
+}
+
+.flashcard-front button {
+    border: none;
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    transition: transform 1s ease;
+    background-color: rgb(253, 253, 253);
+}
+
+.flashcard-back {
+    transform: rotateY(180deg);
+    flex-direction: column;
+    background-color: rgb(226, 192, 226);
+    color: purple;
+}
+
+.flashcard-front p,
+.flashcard-back p {
+    font-weight: bold;
+}
+
+.back {
+    font-size: medium;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    color: purple;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    background-color: rgb(226, 192, 226);
+    border: 1.5px solid purple;
+    cursor: pointer;
+}
