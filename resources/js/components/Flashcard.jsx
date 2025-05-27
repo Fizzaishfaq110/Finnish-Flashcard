@@ -13,12 +13,7 @@ const FlashCard = () => {
         const apiWords = async () => {
             try {
                 const response = await axios.get(
-                    "http://namecolor.test/api/proxy/finnish-words",
-                    {
-                        headers: {
-                            "x-api-key": "***REMOVED***",
-                        },
-                    }
+                    "http://namecolor.test/api/proxy/finnish-words"
                 );
                 console.log("Full response:", response);
                 setWords(response.data.words);

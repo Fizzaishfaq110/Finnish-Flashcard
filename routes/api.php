@@ -13,8 +13,9 @@ Route::get('/user', function (Request $request) {
 
 
 Route::get('/proxy/finnish-words', function (Request $request) {
+    $apiKey= env("FINNFAST_API_KEY");
     $response = Http::withHeaders([
-        'x-api-key' => '***REMOVED***'
+        'x-api-key' => $apiKey,
     ])->get('https://finnfast.fi/api/words', [
         'limit' => 20,
         'page' => 1,
