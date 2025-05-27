@@ -23,8 +23,7 @@ An app to learn Finnish using flashcards, integrated with [finnfast.fi API](http
 1. Clone the repo:
 
    ```bash
-   git clone 
-   cd namecolor
+   git clone https://github.com/Fizzaishfaq110/Finnish-Flashcard.git
    ```
 2. Backend:
 
